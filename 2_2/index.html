@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>クリックイベントと切り替え</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script>
+    $(function () {
+      // ここに処理を記述
+
+      let button1_tag = document.getElementById('button1');
+      let button2_tag = document.getElementById('button2');
+      let button3_tag = document.getElementById('button3');
+
+      button1_tag.addEventListener("click", function () {
+        button1_tag.style.backgroundColor = "red"
+        button2_tag.style.backgroundColor = "#fdd"
+        button3_tag.style.backgroundColor = "#fdd"
+        // button2_tag.classList.remove("inactive");
+        // button3_tag.classList.remove("inactive");
+      });
+
+      button2_tag.addEventListener("click", function () {
+        button2_tag.style.backgroundColor = "red"
+        button1_tag.style.backgroundColor = "#fdd"
+        button3_tag.style.backgroundColor = "#fdd"
+        // button2_tag.classList.remove("inactive");
+        // button3_tag.classList.remove("inactive");
+      });
+
+      button3_tag.addEventListener("click", function () {
+        button3_tag.style.backgroundColor = "red"
+        button2_tag.style.backgroundColor = "#fdd"
+        button1_tag.style.backgroundColor = "#fdd"
+      });
+
+    });
+  </script>
+
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="button1" class="button">
+      <p>button1</p>
+    </div><!-- button1 -->
+    <div id="button2" class="button">
+      <p>button2</p>
+    </div><!-- button2 -->
+    <div id="button3" class="button">
+      <p>button3</p>
+    </div><!-- button3 -->
+  </div><!-- wrapper -->
+</body>
+
+</html>
